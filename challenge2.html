@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>챌린지 2 - HTML을 이용해서 설문조사 양식 만들기</title>
+</head>
+<body>
+  <h1>설문조사 양식</h1>
+  <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+  <hr>
+  <form action="" method="post">
+    <fieldset>
+      <legend>개인정보</legend>
+      <label for="name">이름</label>
+      <input type="text" id="name">
+      <label for="email">이메일주소</label>
+      <input type="email" id="email">
+    </fieldset>
+  </form>
+  <form action="" method="post">
+    <fieldset>
+      <legend>설문</legend>
+      <p>연령대가 어떻게 되십니까?</p>
+      <label for="age1"><input type="radio" name="age" id="age1">10대</label>
+      <label for="age2"><input type="radio" name="age" id="age2">20대</label>
+      <label for="age3"><input type="radio" name="age" id="age3">30대</label>
+      <label for="age4"><input type="radio" name="age" id="age4">40대</label>
+      <label for="age5"><input type="radio" name="age" id="age5">그 외</label>
+      <p>학원을 선택할 때 가장 중요하게 생각하는 것은 무엇입니까? 모두 고르시오.</p>
+      <label for="reason1"><input type="checkbox" name="reason" id="reason1">위치</label>
+      <label for="reason2"><input type="checkbox" name="reason" id="reason2">학원비</label>
+      <label for="reason3"><input type="checkbox" name="reason" id="reason3">강사</label>
+      <label for="reason4"><input type="checkbox" name="reason" id="reason4">시설</label>
+      <p>원하시는 수강 시간은 언제인가요?</p>
+      <input type="datetime-local" name="time" id="time">
+      <p>현재 진도율은 어떻게 되시나요?</p>
+      <input type="range" name="range" id="range">
+    </fieldset>
+    <fieldset>
+      <legend>기타 의견</legend>
+      <textarea name="etc" id="etc" cols="50" rows="10"></textarea>
+    </fieldset>
+  </form>
+  <button type="submit">제출</button>
+  <hr>
+  <p>입력하느라 수고하셨습니다.</p>
+</body>
+</html>
