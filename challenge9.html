@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>챌린지 9 - 간단한 소개 화면 만들기 </title>
+
+  <!-- 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- 아이콘 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- css -->
+  <style>
+    * {padding: 0; margin: 0; border: 0; box-sizing: border-box; font-family: 'Noto Serif KR', system-ui;}
+    body {background: bisque;}
+    ul, li {list-style: none;}
+    h1, h2 {margin-bottom: 32px;} 
+    p {margin-bottom: 20px;}
+    ul li {margin-bottom: 12px;}
+    a {text-decoration: none; color: limegreen; font-size: 16px; line-height: 24px; font-weight: bold;}
+    a span {margin-right: 4px; color: green; vertical-align: middle;}
+    p {color: #7a7a7a; font-size: 14px; line-height: 20px; font-weight: bold;}
+
+    main {display: flex; background: #fff; border-radius: 12px; overflow: hidden;}
+    aside {width: 30%; padding: 24px; background: gold;}
+    section {width: 70%; padding: 24px;}
+    #wrap {padding: 4px;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <main>
+      <aside>
+        <h1>Fun Sidebar</h1>
+        <p>Enjoy your time here!</p>
+        <nav>
+          <ul>
+            <li><a href=""><span class="material-symbols-outlined">
+              stadia_controller</span>Play a Game</a></li>
+            <li><a href=""><span class="material-symbols-outlined">
+              headphones</span>Listen to Music</a></li>
+            <li><a href=""><span class="material-symbols-outlined">
+              theaters</span>Watch a Movie</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section>
+        <header>
+          <h2>즐거운 초격차 교실!</h2>
+          <p>Welcome to the fun zone of OZ! Have a good time!</p>
+        </header>
+        <article>
+          <ul>
+            <li><a href=""><span class="material-symbols-outlined">sentiment_satisfied</span>Tell a Joke</a></li>
+            <li><a href=""><span class="material-symbols-outlined">draw</span>Draw Something</a></li>
+            <li><a href=""><span class="material-symbols-outlined">coffee</span>Grab a coffee</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
