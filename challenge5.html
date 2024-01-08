@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>챌린지5 - CSS를 이용한 회원가입 폼 만들기</title>
+  <style>
+    * {padding: 0; margin: 0; border: 0; box-sizing: border-box;}
+    button {padding: 2px; border: 1px solid #333; border-radius: 3px;}
+    h1 {margin: 40px 0; text-align: center;}
+    form {padding: 40px; border: 1px solid #888; border-radius: 4px; background: gold;}
+    label {overflow: hidden; display: block; margin-bottom: 12px; border: 1px solid #555; border-radius: 4px;}
+    input {display: block; width: 100%; padding: 4px; font-size: 12px; line-height: 20px;}
+    .form_wrap {max-width: 640px; padding: 40px; margin: 0 auto; border-radius: 40px; background: lemonchiffon; box-shadow: 3px 3px lightgreen, 8px 8px lime, 13px 13px darkgreen;}
+    .tel {display: inline-block; margin-bottom: 12px;}
+    .tel label {display: inline-block; margin-bottom: 0;}
+    .serial_number {margin: 12px 0; text-align: right;}
+    .serial_number span {font-size: 14px; line-height: 16px; margin-right: 10px;}
+    select {width: 100%; padding: 8px; border: 1px solid #333; border-radius: 3px;}
+    .gender {text-align: center; margin-top: 20px;}
+    .gender input {display: inline-block; width: auto; margin-right: 4px;}
+    .gender label {display: inline-block; border: 0;}
+    .submit {width: 100%; padding: 10px;}
+  </style>
+</head>
+<body>
+  <div class="form_wrap">
+    <h1>OZ초격차 회원가입</h1>
+    <form action="" method="post">
+      <fieldset>
+        <label for="email">
+          <input type="text" id="email" placeholder="이메일을 입력하세요.">
+        </label>
+        <label for="name">
+          <input type="text" id="name" placeholder="이름을 입력하세요.">
+        </label>
+        <label for="pwd">
+          <input type="text" id="pwd" placeholder="비밀번호를 입력하세요.">
+        </label>
+        <label for="chk_pwd">
+          <input type="text" id="chk_pwd" placeholder="비밀번호를 다시 입력하세요.">
+        </label>
+        <p class="tel">
+          <label for="number_first"><input type="tel" id="number_first" placeholder="010"></label>
+          <span>-</span>
+          <label for="number_first"><input type="tel" id="number_first" placeholder="0000"></label>
+          <span>-</span>
+          <label for="number_first"><input type="tel" id="number_first" placeholder="0000"></label>
+        </p>
+        <p class="serial_number"><span>00000</span><button type="button">인증번호 전송</button></p>
+        <p class="serial_number"><span>3:00</span><button type="submit" disabled>인증완료</button></p>
+        <select name="" id="" placeholder="-지역을 선택하세요-">
+          <option value="">서울</option>
+          <option value="">대구</option>
+          <option value="">부산</option>
+          <option value="">인천</option>
+        </select>
+        <p class="gender">
+          <label for=""><input type="radio" name="" id="">여성</label>
+          <label for=""><input type="radio" name="" id="">남성</label>
+        </p>
+        <button type="submit" class="submit">가입하기</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>
