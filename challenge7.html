@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>챌린지7 - CSS를 이용해서 프로필 페이지에 스타일시트 입히기</title>
+  <style>
+    * {margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+    body {background: #165200; color: #fff;}
+    header, section,footer {display: flex; align-items: center; flex-direction: column;}
+    header {padding: 30px 0;}
+    main section:nth-child(2) {margin-top: 40px; padding: 20px; border: 3px solid #ffcc00;}
+    main section ol {margin-top: 30px;}
+    main section ol li {margin-bottom: 8px; font-size: 14px; line-height: 18px;}
+    .description {margin-top: 40px;}
+    .description p {margin-bottom: 8px; font-size: 16px; line-height: 20px; text-align: center;}
+    .img_area {display: flex; padding: 20px 0; align-items: center; justify-content: center;}
+    .img_area img {border-radius: 50%;}
+    footer {padding: 30px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>여 인 영</h1>
+  </header>
+  <main>
+    <section>
+      <article class="img_area">
+        <img src="img1.JPG" alt="필름카메라로 찍은 호수 사진" width="450">
+      </article>
+      <article class="description">
+        <p>안녕하세요. 여인영입니다.</p>
+        <p>현재 서울에서 개발자를 준비하고 있습니다.</p>
+        <p>낯을 많이 가리는 편이고, 집순이입니다.</p>
+      </article>
+    </section>
+    <section>
+      <h2>취미</h2>
+      <ol>
+        <li><strong>삼성라이온즈</strong> 팬입니다.</li>
+        <li><mark>필름카메라</mark>를 좋아합니다.</li>
+        <li><u>밴드음악</u>을 즐겨 듣습니다.</li>
+      </ol>
+    </section>
+  </main>
+  <footer>
+    <h2>made by marineyeong</h2>
+  </footer>
+</body>
+</html>
