@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>챌린지8 - 다이어리 만들기</title>
+  <style>
+    * {margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+    #wrap {max-width: 480px; padding: 8px; margin: 0 auto; background: blanchedalmond;}
+    
+    header {display: flex; padding: 12px0; align-items: center; justify-content: space-between; border: 3px solid darkorange}
+    header > * {padding: 4px; }
+
+    main {padding: 10px 0;}
+    .img_area {padding: 12px; border: 3px solid orange; width: 100%;}
+    .img_area img {width: 100%;}
+    .diary_area {margin-top: 20px;}
+    table {width: 100%; border: 3px solid gold; border-collapse : collapse;}
+    table th, table td {width:8.3333%; padding: 2px; border: 1px solid gold; text-align: center;}
+    table th {font-size: 18px; line-height: 30px;}
+    table td {font-size: 14px; line-height: 24px;}
+    footer {padding: 12px; color: #999; font-size: 12px; text-align: center;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>2024년 1월 8일</h1>
+      <p>날씨: 
+        <label for="good">
+          <input type="radio" name="weather" id="good">
+          맑음
+        </label>
+        <label for="soso">
+          <input type="radio" name="weather" id="soso">
+          흐림
+        </label>
+        <label for="bad">
+          <input type="radio" name="weather" id="bad">
+          비
+        </label>
+      </p>
+    </header>
+    <main>
+      <section>
+        <article class="img_area">
+          <img src="img1.JPG" alt="필름카메라로 찍은 호수와 테이블, 의자가 담긴 사진">
+        </article>
+        <article class="diary_area">
+          <table>
+            <thead>
+              <tr>
+                <th>재</th>
+                <th>미</th>
+                <th>있</th>
+                <th>는</th>
+                <th>C</th>
+                <th>S</th>
+                <th>S</th>
+                <th>로</th>
+                <th>꾸</th>
+                <th>미</th>
+                <th>기</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>이</td>
+                <td>것</td>
+                <td>저</td>
+                <td>것</td>
+                <td></td>
+                <td>꾸</td>
+                <td>미</td>
+                <td>는</td>
+                <td></td>
+                <td>맛</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>솔</td>
+                <td>솔</td>
+                <td></td>
+                <td></td>
+                <td>재</td>
+                <td>미</td>
+                <td>있</td>
+                <td>다</td>
+                <td></td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+    <footer>made by marineyeong</footer>
+  </div>
+</body>
+</html>
