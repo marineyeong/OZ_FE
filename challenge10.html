@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 챌린지 10 - 눈사람 만들기</title>
+  <style>
+    body {background: lightskyblue;}
+    #wrap {display: flex; justify-content: center; align-items: center;}
+    section {position: relative;}
+    .snowman {position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+    span {display: block; background: #fff; border-radius: 50%;}
+    span i {position: absolute;}
+    span.top {width: 80px; height: 80px;}
+    span.top i {width: 6px; height: 6px; top: 30px; right: calc(50% - 25px); background: #eee; border: 6px solid #333; border-radius: 50%;}
+    span.top i:first-child {right: calc(50% + 8px);}
+    span.top i.mouse {width: 20px; height: 5px; top: 55px; right: calc(50% - 12px); background: red; border-width: 3px;}
+    span.middle {position: relative; width: 120px; height: 120px; z-index: 10;}
+    span.middle i {position: absolute; width: 10px; height: 10px; top: 25px; background: #333; border-radius: 50%; transform: translateX(55px);}
+    span.middle i:nth-child(2) {top: 50px;}
+    span.middle i:nth-child(3) {top: 75px;}
+    span.middle i.arm {width: 60px; height: auto; border: 3px solid brown; border-radius: 0;}
+    span.middle i.arm.left {left: -40px; transform: rotate(30deg);}
+    span.middle i.arm.right {right: -40px; transform: rotate(-30deg);}
+    span.bottom {width: 160px; height: 160px;}
+    span.bottom i {width: 15px; height: 30px; bottom: 0px; left: calc(50% - 30px); background: orange; border-radius: 50%; transform: rotate(-30deg);}
+    span.bottom i:last-child {left: calc(50% + 15px); transform: rotate(30deg)}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <section>
+      <div class="snowman">
+        <span class="top">
+          <i></i>
+          <i></i>
+          <i class="mouse"></i>
+        </span>
+        <span class="middle">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i class="arm left"></i>
+          <i class="arm right"></i>
+        </span>
+        <span class="bottom">
+          <i></i>
+          <i></i>
+        </span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
