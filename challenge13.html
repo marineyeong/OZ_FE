@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데리아</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+        .nav-checkbox {display: none;}
+
+        .nav-button {display: none; background-color: #ffebeb; width: 7rem; height: 6rem; position: fixed; top: 0; right: 0; z-index: 2000; cursor: pointer; border-radius: 2px; -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1); box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1); text-align: center;}
+
+        .nav-bg {background-image: -webkit-gradient(linear, left top, left bottom, from(#fff8f8), to(#ED1A2F)); background-image: linear-gradient(#fff8f8, #ED1A2F); width: 100%; height: 100%; position: fixed; top: 0; right: 0; z-index: 1000; border-radius: 2px; -webkit-transition: all .8s; transition: all .8s;}
+
+        .nav-icon {position: relative; margin-top: 3rem;}
+        
+        .nav-icon::before {top: -0.8rem;}
+
+        .nav-icon::after {top: 0.8rem;}
+
+        .nav-icon::before, 
+        .nav-icon::after { position: absolute; content: ''; left: 0; -webkit-transition: all 0.2s; transition: all 0.2s;}
+
+        .nav-icon, 
+        .nav-icon::before, 
+        .nav-icon::after { width: 3rem; height: 2px; background-color: #333; display: inline-block;}
+
+        .nav-button:hover .nav-icon::before {top: -1rem;}
+
+        .nav-button:hover .nav-icon::after {top: 1rem;}
+        
+        .nav-body {position: fixed; top: 0; left: 120%; width: 100vw; height: 100vh; z-index: 1500; opacity: 0; opacity: 1; left: 0; -webkit-transition: all .8s; transition: all .8s;}
+        
+        .nav-list { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); list-style: none; width: 100%; text-align: center;}
+        
+        .nav-link { display: inline-block; font-size: 3rem; font-weight: 300; padding: 1rem 2rem; color: #fff; text-decoration: none; text-transform: uppercase; -webkit-transition: all .4s; transition: all .4s; background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%); background-size: 220%;}
+        
+        .nav-link:hover { color: #ED1A2F; background-position: 100%; -webkit-transform: translateX(1rem); transform: translateX(1rem);}
+        
+        .nav-link span { display: inline-block; margin-right: 1.5rem;}
+        
+        .nav-checkbox:checked ~ .nav-button .nav-icon {background-color: transparent;}
+        .nav-checkbox:checked ~ .nav-button .nav-icon::before {top: 0;-webkit-transform: rotate(135deg); transform: rotate(135deg);}
+        .nav-checkbox:checked ~ .nav-button .nav-icon::after {top: 0;-webkit-transform: rotate(-135deg); transform: rotate(-135deg);}
+        .nav-checkbox:checked ~ .nav-body { opacity: 1; left: 0;}            
+        
+        @media (max-width: 550px) {
+            .nav-bg {background-image: #fff;}
+            .nav-button {display: block;}
+            .nav-body {left: 120%; opacity: 0;}
+            .nav-checkbox:checked ~ .nav-body { opacity: 1; left: 0;}            
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <input type="checkbox" class="nav-checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="nav-button">
+                <span class="nav-icon"></span>
+            </label>
+            <div class="nav-bg"></div>
+            <div class="nav-body">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link"><span>01</span>메뉴</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><span>02</span>LOTTE EATS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><span>03</span>매장찾기</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><span>04</span>이벤트</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><span>05</span>브랜드 소개</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
