@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while문 - 4의 배수 5개씩 출력하기</title>
+</head>
+<body>
+  <script>
+    let n=100;
+    let i=0;
+    while (n <=501) {
+      n=n+1;
+      result="";
+      if(n % 4 == 0) {
+        result = n+' ';
+      }if (n % 20 == 0) {
+        result = n+'<br>'
+      }
+      document.write(result);
+    }
+  </script>
+</body>
+</html>
