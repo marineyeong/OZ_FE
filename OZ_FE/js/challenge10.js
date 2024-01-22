@@ -25,7 +25,18 @@ function question(a, n) {
       result = result + 1;
     }
   }
+  // for(let x of a){
+  //   if(x == n) {
+  //     result = result + 1;
+  //   }
+  // }
   return result;
+
+  for(let x of n){
+    if(x == n) {
+      result = result + 1;
+    }
+  }
 }
 
 // 여기는 결과값 함수이므로 신경쓰지 않으셔도 됩니다!
