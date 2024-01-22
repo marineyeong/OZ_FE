@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카운트다운</title>
+</head>
+<body>
+  <!-- new date()를 이용해서 현재시간을 가져오기 -->
+  <!-- 심화: 올해의 마지막 - 현재 -->
+  <script>    
+    let today = new Date();
+    let nowDate = today.getTime();
+
+    let lastDate = new Date('2024-12-31 23:59:59');
+    let standardDate = lastDate.getTime();
+
+    let period = lastDate - nowDate;
+    let seconds = Math.round((period / 1000) % 60); //밀리초기 때문에 1000으로 나누고, 1분 기준인 60초를 나눴을 때 남는 것이 초가 됨.
+    let mins = Math.floor((period / (1000 * 60)) % 60);
+    let hours = Math.floor(period / (1000 * 60 * 60) % 24);
+    let days = Math.round(period / (1000 * 60 * 60 * 24));
+    // 밀리초 참고 https://lakelouise.tistory.com/44
+
+    let newDate = new Date(period);
+    document.write('<h4>현재 시간</h4>' + today);
+    document.write('<h4>남은 시간</h4>' + '<p>'+ days + '일' + hours + '시간' + mins + '분' + seconds + '초</p>')
+
+    console.log(seconds);
+    console.log(mins);
+    console.log(hours);
+    console.log(days);
+  </script>
+</body>
+</html>
