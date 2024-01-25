@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가위바위보 게임</title>
+</head>
+<body>
+  <h1>가위바위보 게임</h1>
+  <input type="text" class="input"><button class="btn">결과 확인</button>
+  <p class="myChoose">나의 선택은? <span></span></p>
+  <p class="comChoose">컴퓨터의 선택은? <span></span></p>
+  <p class="result">결과 : <span></span></p>
+  <script>
+    let input = document.querySelector('.input');
+    let resultMyChoose = document.querySelector('.myChoose span');
+    let resultComChoose = document.querySelector('.comChoose span');
+    let resultText = document.querySelector('.result span');
+    let btn = document.querySelector('.btn');
+
+    let Arr = ['가위', '바위', '보'];
+
+    btn.addEventListener("click", function () {
+      let idx = Math.floor(Math.random() * 3);
+      let inputValue = input.value;
+            
+      resultMyChoose.innerHTML=inputValue;
+      resultComChoose.innerHTML=Arr[idx];
+
+      if(inputValue == Arr[idx]) {
+        resultText.innerHTML='무승부입니다.';
+      }else if(inputValue == '가위'){
+        if(Arr[idx] == '바위') {
+          resultText.innerHTML='이기지 못했습니다.'
+        }else {
+        resultText.innerHTML='이겼습니다';
+        }
+      }else if(inputValue == '바위') {
+        if(Arr[idx] == '보') {
+          resultText.innerHTML='이기지 못했습니다.'
+        }else {
+          resultText.innerHTML='이겼습니다';
+        }
+      }else if(inputValue == '바위'){
+        if(Arr[idx] == '보'){
+          resultText.innerHTML='이기지 못했습니다.'
+        }else {
+        resultText.innerHTML='이겼습니다.';
+      }
+      }
+    })
+    
+  </script>
+</body>
+</html>
