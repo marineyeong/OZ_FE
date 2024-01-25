@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bg {width: 1200px; height: 800px; background: url(images/bg1.jpg)}
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <button class="btn">멈춰</button>
+  <script>
+    let bgImage = document.querySelector('.bg');
+    let btnStop = document.querySelector('.btn');
+    let idx = 1;
+    
+    let bgChange = setInterval (
+      function(){
+        idx ++;
+        bgImage.style.background = `url(images/bg${idx}.jpg)`
+        if (idx > 2) {
+          idx = 0;
+        }
+      }, 2000
+    ) 
+
+    btnStop.addEventListener("click",function () {
+      clearInterval(bgChange);
+    })
+
+  </script>
+</body>
+</html>
