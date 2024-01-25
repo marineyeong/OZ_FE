@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이스크림 추가 및 나열</title>
+</head>
+<body>
+  <button class="add">아이스크림 종류 추가</button>
+  <button class="output">아이스크림 이름 출력</button>
+  <button class="list">입력한 아이스크림 목록 츌력</button>
+
+  <script>
+    let btnAdd = document.querySelector('.add')
+    let btnOutput = document.querySelector('.output')
+    let btnList = document.querySelector('.list')
+    let ArrItem;
+    let ArrList = [];
+  
+    btnAdd.addEventListener("click", function () {
+      ArrItem = prompt("좋아하는 아이스크림을 추가해주세요","누가바");
+      ArrList.push(ArrItem);
+    })
+    btnOutput.addEventListener("click", function () {
+      alert(ArrItem)
+    })
+    btnList.addEventListener("click", function () {
+      alert(ArrList)
+    })
+  </script>
+
+</body>
+
+</html>
